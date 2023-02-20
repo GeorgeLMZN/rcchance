@@ -1,3 +1,3 @@
 ###Запуск###
 
-cd ../backend && nodemon index.js
+cd backend && nodemon index.js
