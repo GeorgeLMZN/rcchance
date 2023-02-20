@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include(partials.header) %>
+    <section class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <% for(var i=0; i < breadcrumbs.length; i++) {%>
+                    <li class="breadcrumb">
+                        <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </section>
+    <section class="section bg-gray">
+        <div class="container">
+            <div class="about">
+                <h3 class="content-heading">
+                    <span class="content-heading_top">
+                        ЦЕНЫ НА УСЛУГИ
+                    </span>
+                    <span class="content-heading_bottom">
+                        И ЛЕЧЕНИЕ
+                    </span>
+                </h3>
+            </div>
+        </div>
+        <div class="container pb-50">
+            <div class="content mb-50">
+                    <div class="content-text">
+                        <div class="content-info mt-0">
+                            <p>
+                                Сегодня, в наше непростое время, многие семьи все чаще сталкиваются 
+                                с проблемой алкоголизма. Пьет один человек, а страдают все. Если вовремя на лечить алкоголизм, 
+                                человек попросту потеряет своё я, облик, его психологическое состояние будет полностью 
+                                разрушено пагубной зависимостью. Осложняется все и тем, что алкоголик попросту не осознает своей проблемы.
+                            </p>
+                        </div>
+                        <div class="content-info">
+                            <p>
+                                Помочь ему не только можно, но и нужно. В нашей клинике «Шанс» вы всегда сможете получить  
+                                компетентное, анонимное лечение алкогольной зависимости. В программу лечения входит: 
+                                детоксикационная терапия, противорецидивная терапия, комплексная. 
+                                Это снятие детоксикации, психологическая помощь, групповые занятия и тд.
+                            </p>
+                        </div>
+                        <div class="content-info mt-20">
+                            <a class="button_download">
+                                Скачать прейскурант
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-image">
+                        <img src="/public/images/2.jpeg" alt="">
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="about">
+                <h3 class="content-heading">
+                    <span class="content-heading_top">
+                        АЛКОГОЛИЗМ:
+                    </span>
+                    <span class="content-heading_bottom">
+                        ЭФФЕКТИВНО И ПО ДОСТУПНОЙ ЦЕНЕ
+                    </span>
+                </h3>
+            </div>
+        </div>
+        <div class="container pb-50">
+            <div class="content mb-50">
+                    <div class="content-text">
+                        <div class="content-info mt-0">
+                            <p>
+                                В нашей клинике трудятся исключительно профессионалы своего дела, которые смогут найти подход к любому пациенту.
+                                 Мы гарантируем полную анонимность. Понимая, что не в каждой семье есть средства для лечения алкоголизма, 
+                                мы сделали доступные цены, убедитесь сами!
+                                Не стоит молчать о проблеме, своевременное и эффективное лечение – это шаг на пути к здоровой и полноценной жизни без алкоголя.
+                            </p>
+                        </div>
+                        <div class="content-info mt-20">
+                            <a class="button_download">
+                                Скачать прейскурант
+                            </a>
+                        </div>
+                    </div>
+                    <div class="content-image">
+                        <img src="/public/images/2.jpeg" alt="">
+                    </div>
+            </div>
+        </div>
+    </section>
+    <%- include(partials.footer) %>
+</body>
+</html>

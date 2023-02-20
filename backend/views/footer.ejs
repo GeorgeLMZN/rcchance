@@ -1,0 +1,67 @@
+<footer class="footer bg-gray">
+    <div class="container">
+        <nav class="footer-nav">
+            <ul class="footer-nav_list">
+                <% for(var i=0; i < routes.length; i++) {%>
+                    <li class="footer-nav_item">
+                        <a href="<%- routes[i].path %>" class="footer-nav_link"><%= routes[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+            <a href="<%= routes[0].path %>" class="footer-nav_logo">
+                <div class="footer-nav_logo-image"></div>
+                <span class="header-nav_logo-text__top">Клиника Шанс</span>
+            </a>
+        </nav>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <span>
+                Наркологическая клиника «Шанс» в Самаре.
+            </span>
+            <br/>
+            <a href="#" target="_blank" class="footer-copyright_link">ООО "Медицинский центр "Шанс" не оказывает услуги по ОМС.</a>
+        </div>
+    </div>
+</footer>
+<div class="modal d-none">
+    <div class="modal-shadow"></div>
+    <form class="modal-window">
+        <div class="modal-window_head">
+            <h2 class="modal-window_heading">
+                Свяжитесь с нами
+            </h2>
+            <button class="modal-window_close"></button>
+        </div>
+        <div class="modal-window_body">
+            <div class="modal-window_form">
+                <label class="modal-window_control" for="name">
+                    <span class="input-label">
+                        Ваше имя:
+                    </span>
+                    <input class="input input-default" type="text">
+                </label>
+                <label class="modal-window_control" for="phone">
+                    <span class="input-label">
+                        Ваше телефон:
+                    </span>
+                    <input id="phone" class="input input-default" type="text">
+                </label>
+                <label class="modal-window_control" for="question">
+                    <span class="input-label">
+                        Ваш вопрос:
+                    </span>
+                    <textarea id="question" class="textarea input-default" type="text"></textarea>
+                </label>
+            </div>
+        </div>
+        <div class="modal-window_footer">
+            <button class="modal-window_send">
+                Отправить
+            </button>
+        </div>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="/public/lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script src="/public/scripts/script.js"></script>

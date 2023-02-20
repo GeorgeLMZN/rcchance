@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b6b24968-9f7e-4e50-b23e-ce16950a9b80&lang=ru_RU"
+        type="text/javascript"></script>
+    <title>Статья</title>
+</head>
+
+<body>
+    <%- include(partials.header) %>
+        <section class="section">
+            <div class="container-fluid">
+                <div class="main">
+                    <div class="container">
+                        <h1 class="main-heading">
+                            <span class="main-heading_top">
+                                Контакты
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="breadcrumbs">
+            <div class="container pt-50">
+                <ul class="breadcrumbs-list">
+                    <% for(var i=0; i < breadcrumbs.length; i++) {%>
+                        <li class="breadcrumb">
+                            <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container pb-50">
+                <div class="about">
+                    <h3 class="content-heading">
+                        <span class="content-heading_top">
+                            Контактная
+                        </span>
+                        <span class="content-heading_bottom">
+                            информация
+                        </span>
+                    </h3>
+                </div>
+                <div class="contact">
+                    <ul class="contact-list">
+                        <div class="contact-list_phones">
+                            <h3 class="block-heading">Телефоны:</h3>
+                            <li class="contact-list_item">
+                                <a href="tel:+7 846 990-19-21" class="contact-list_link">
+                                    <div class="contact-list_icon__phone">
+                                        <img src="/public/images/phone.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">+7 846 990-19-21</span>
+                                </a>
+                            </li>
+                            <li class="contact-list_item">
+                                <a href="tel:+7 927 260-19-21" class="contact-list_link">
+                                    <div class="contact-list_icon__phone">
+                                        <img src="/public/images/phone.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">+7 927 260-19-21</span>
+                                </a>
+                            </li>
+                            <li class="contact-list_item">
+                                <a href="tel:+7 846 972-16-60" class="contact-list_link">
+                                    <div class="contact-list_icon__phone">
+                                        <img src="/public/images/phone.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">+7 846 972-16-60</span>
+                                </a>
+                            </li>
+                            <li class="contact-list_item">
+                                <a href="tel:+7 927 692-16-60" class="contact-list_link">
+                                    <div class="contact-list_icon__phone">
+                                        <img src="/public/images/phone.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">+7 927 692-16-60</span>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="contact-list_mails">
+                            <h3 class="block-heading">Эл. почта:</h3>
+                            <li class="contact-list_item">
+                                <a href="mailto:rcchance@mail.ru" class="contact-list_link">
+                                    <div class="contact-list_icon__mail">
+                                        <img src="/public/images/mail.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">rcchance@mail.ru</span>
+                                </a>
+                            </li>
+                            <h3 class="block-heading">Сайт:</h3>
+                            <li class="contact-list_item">
+                                <a href="https://rcchance.ru/" target="_blank" class="contact-list_link">
+                                    <div class="contact-list_icon__web">
+                                        <img src="/public/images/web.svg" alt="icon-phone">
+                                    </div>
+                                    <span class="contact-list__text">rcchance.ru</span>
+                                </a>
+                            </li>
+                        </div>
+                    </ul>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section bg-gray">
+            <div class="container pb-50 pt-50">
+                <div>
+                    <h3 class="block-heading">Территориальный орган Росздравнадзора по Самарской области</h3>
+
+                    <p class="mt-10">
+                        <strong> Адрес: </strong>443041, Россия, Самарская область, г. Самара, ул. Арцыбушевская,
+                        д.13 <br>
+                    </p>
+                    <p class="mt-10">
+                        <strong>Руководитель:</strong> Еремеев Антон Евгеньевич, тел. 8 846 3332087
+                        samara@reg63.roszdravnador.ru <br>
+                    </p>
+
+                    <h3 class="block-heading mt-20">
+                        Управление федеральной службы по надзору в сфере защиты прав потребителей и благополучия
+                        человека по
+                        Самарской области
+                    </h3>
+
+                    <p class="mt-10">
+                        <strong>Адрес: </strong>443079, г. Самара, проезд Георгия Митирёва, дом 1 <br>
+                    </p>
+                    <p class="mt-10">
+                        <strong class="mt-10">Руководитель:</strong> Архипова Светлана Валерьевна тел. 8 846 260382
+                        sancntr@fsnsamara.ru <br>
+                    </p>
+
+                    <h3 class="block-heading mt-20">Министерство здравоохранения Самарской области</h3>
+
+                    <p class="mt-10">
+                        <strong>Адрес:</strong> 443020, г. Самара, ул. Ленинская 73 <br>
+                    </p>
+                    <p class="mt-10">
+                        <strong>Руководитель:</strong> Бенян Армен Сисакович, тел. 8 846 3329309
+                        zdravso@samregion.ru
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="about">
+                    <h3 class="content-heading">
+                        <span class="content-heading_top">
+                            Свяжитесь
+                        </span>
+                        <span class="content-heading_bottom">
+                            с нами
+                        </span>
+                    </h3>
+                </div>
+                <div class="contact-main">
+                    <form class="conact-modal">
+                        <div class="modal-window_body">
+                            <div class="modal-window_form">
+                                <label class="modal-window_control" for="name">
+                                    <span class="input-label">
+                                        Ваше имя:
+                                    </span>
+                                    <input class="input input-default" type="text">
+                                </label>
+                                <label class="modal-window_control" for="phone">
+                                    <span class="input-label">
+                                        Ваше телефон:
+                                    </span>
+                                    <input id="phone" class="input input-default" type="text">
+                                </label>
+                                <label class="modal-window_control" for="question">
+                                    <span class="input-label">
+                                        Ваш вопрос:
+                                    </span>
+                                    <textarea id="question" class="textarea input-default" type="text"></textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-window_footer">
+                            <button class="modal-window_send">
+                                Отправить
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <%- include(partials.footer) %>
+            <script src="../public/scripts/map.js"></script>
+</body>
+
+</html>
