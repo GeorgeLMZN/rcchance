@@ -125,7 +125,46 @@ button {
   min-height: 100%;
   padding: 32px 20px;
   background-color: #40AD74;
+  padding-top: 100px;
   transition: none;
+}
+
+.header-nav_item-sub  {
+  padding-left: 20px;
+  margin-top: -15px;
+}
+.header-nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-nav_item .triangle {
+  width: 20px;
+  height: 20px;
+  transform: rotate(180deg);
+  transition: transform .3s;
+  background-image: url('../images/opensub.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.triangle.open {
+  transform: rotate(0deg);
+}
+
+.header-nav_item-sub .header-nav_item  {
+  margin-bottom: 15px;
+}
+
+.header-nav_item-sub .header-nav_item:last-child {
+  margin-bottom: 25px; 
+}
+
+.header-nav_item-sub .header-nav_link {
+  font-size: 14px;
 }
 .header-nav_list.hidden {
   transform: translateX(100%);
@@ -133,6 +172,8 @@ button {
 .header-nav_list.hidden.visible {
   transform: translateX(0%);
   transition: transform 0.5s;
+  width: 400px;
+  max-width: 100%;
 }
 .header-nav_item {
   margin-bottom: 25px;

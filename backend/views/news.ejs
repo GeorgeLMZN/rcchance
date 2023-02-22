@@ -22,64 +22,31 @@
             </div>
         </div>
     </section>
-    <section class="breadcrumbs">
-        <div class="container">
-            <ul class="breadcrumbs-list">
-                <% for(var i=0; i < breadcrumbs.length; i++) {%>
-                    <li class="breadcrumb">
-                        <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
-                    </li>
-                <% } %>
-            </ul>
-        </div>
-    </section>
     <section class="section">
-        <div class="container-fluid mt-20">
-            <div class="main single-news_main">
-                <div class="container">
-                    <h2 class="main-heading">
-                        <span class="main-heading_top">
-                            Торчать не круто,
-                        </span>
-                        <span class="main-heading_bottom">
-                            круто не торчать
-                        </span>
-                    </h2>
-                    <div class="single-news_text">
-                        <p class="single_news__p">
-                            26 июня МЦ «Шанс» принял участие в антинаркотическом форуме и круглом столе «Самара без наркотиков и наркопотребителей», приуроченном к Международному дню борьбы с незаконным оборотом наркотических средств «МЫ БУДЕМ ЖИТЬ!». В концертном зале Струковского сада состоялся концерт, выставки, мастер-классы, спортивные и оздоровительные мероприятия. Организатором мероприятия выступал Социальный холдинг «РЕМАР». Официальная поддержка оказывалась Правительством Самарской области, Министерством здравоохранения Самарской области, Администрацией городского округа Самара. Участниками мероприятия являлись антинаркотические некоммерческие организации (НКО), негосударственные медико-социальные, социальные центры реабилитации и адаптации.
-                            Фонд «Выбор» и МЦ «Шанс» благодарит участников и партнеров за возможность участия в подобных мероприятиях.
-                        </p>
+        <% for(var i=0; i < content.length; i++) {%>
+            <div class="container-fluid mt-20">
+                <div class="main single-news_main" style="background-image: url('<%- cms_url + content[i].article_preview_image %>')";>
+                    <div class="container">
+                        <h2 class="main-heading">
+                            <span class="main-heading_top">
+                                <%- content[i].article_heading.part_black %>
+                            </span>
+                            <span class="main-heading_bottom">
+                                <%- content[i].article_heading.part_green %>
+                            </span>
+                        </h2>
+                        <div class="single-news_text">
+                            <p class="single_news__p">
+                                <%- content[i].article_preview_text %>
+                            </p>
+                        </div>
+                        <a href="/news/<%- content[i].slug %>" class="btn_default">
+                            Читать подробнее
+                        </a>
                     </div>
-                    <a class="btn_default">
-                        Читать подробнее
-                    </a>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid mt-20">
-            <div class="main single-news_main">
-                <div class="container">
-                    <h2 class="main-heading">
-                        <span class="main-heading_top">
-                            Торчать не круто,
-                        </span>
-                        <span class="main-heading_bottom">
-                            круто не торчать
-                        </span>
-                    </h2>
-                    <div class="single-news_text">
-                        <p class="single_news__p">
-                            26 июня МЦ «Шанс» принял участие в антинаркотическом форуме и круглом столе «Самара без наркотиков и наркопотребителей», приуроченном к Международному дню борьбы с незаконным оборотом наркотических средств «МЫ БУДЕМ ЖИТЬ!». В концертном зале Струковского сада состоялся концерт, выставки, мастер-классы, спортивные и оздоровительные мероприятия. Организатором мероприятия выступал Социальный холдинг «РЕМАР». Официальная поддержка оказывалась Правительством Самарской области, Министерством здравоохранения Самарской области, Администрацией городского округа Самара. Участниками мероприятия являлись антинаркотические некоммерческие организации (НКО), негосударственные медико-социальные, социальные центры реабилитации и адаптации.
-                            Фонд «Выбор» и МЦ «Шанс» благодарит участников и партнеров за возможность участия в подобных мероприятиях.
-                        </p>
-                    </div>
-                    <a class="btn_default">
-                        Читать подробнее
-                    </a>
-                </div>
-            </div>
-        </div>
+        <% } %>
     </section>
     <%- include(partials.footer) %>
 </body>

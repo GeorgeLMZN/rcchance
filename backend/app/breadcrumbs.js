@@ -1,17 +1,19 @@
 import CyrillicToTranslit from 'cyrillic-to-translit-js';
 const cyrillicToTranslit = new CyrillicToTranslit();
 import lodash from 'lodash';
-import { parsed_routes } from './routes.js';
+import { createRoutes } from './routes.js';
 
-const ixRoutes = lodash.keyBy(parsed_routes, 'path');
+// const ixRoutes = lodash.keyBy(parsed_routes, 'path');
 const ixBreadcrumbs = {};
 
-for (let key in ixRoutes) {
-    const newKey = key.replace('/', '')
-    ixBreadcrumbs[newKey] = ixRoutes[key];
-}
+// for (let key in ixRoutes) {
+//     const newKey = key.replace('/', '')
+//     ixBreadcrumbs[newKey] = ixRoutes[key];
+// }
 
-const get_breadcrumbs = function(url) {
+const getBreadcrumbs = async (url) => {
+    const router = createRoutes();
+
     var rtn = [{ name: "Главная", url: "/" }],
         acc = "",
         arr = url.substring(1).split("/");
@@ -29,4 +31,4 @@ const get_breadcrumbs = function(url) {
     return rtn;
 };
 
-export { get_breadcrumbs };
+export { getBreadcrumbs };

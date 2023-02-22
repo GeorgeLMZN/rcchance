@@ -1,7 +1,7 @@
 <header class="header">
     <div class="container-fluid">
         <nav class="header-nav">
-            <a href="<%= routes[0].path %>" class="header-nav_logo">
+            <a href="/" class="header-nav_logo">
                 <div class="header-nav_logo-image"></div>
                 <div class="header-nav_logo-text">
                     <span class="header-nav_logo-text__top">Клиника Шанс</span>
@@ -25,10 +25,25 @@
                 <div class="header-nav_btn header-nav_btn__close">
                     <img src="/public/images/arrow_right.svg" alt="">
                 </div>
-                <% for(var i=0; i < routes.length; i++) {%>
+                <% for(var i = 0; i < routes.routes.length; i++) {%>
+
                     <li class="header-nav_item">
-                        <a href="<%- routes[i].path %>" class="header-nav_link"><%= routes[i].name %></a>
+                        <a href="<%- routes.routes[i].path %>" class="header-nav_link"><%= routes.routes[i].name %></a>
+                        <% if (routes.sub_routes[routes.routes[i].id]){ %>
+                            <div class="triangle">
+                                
+                            </div>
+                        <% } %>
                     </li>
+                    <% if (routes.sub_routes[routes.routes[i].id]){ %>
+                        <div class="header-nav_item-sub d-none">
+                            <% routes.sub_routes[routes.routes[i].id].forEach(function(link) { %>
+                                <li class="header-nav_item">
+                                    <a href="<%- '/' + link.parent_slug + link.path %>" class="header-nav_link"><%= link.name %></a>
+                                </li>
+                             <% }); %> 
+                        </div>
+                    <% } %>
                 <% } %>
             </ul>
         </nav>

@@ -48,6 +48,20 @@ const showForm = () => {
   });
 }
 
+const openSub = () => {
+  const btnShow = document.querySelectorAll('.triangle');
+
+  btnShow.forEach((e) => {
+    e.addEventListener('click', (e) => {
+        const subList = e.target.parentNode.parentNode.querySelector('.header-nav_item-sub');
+        subList.classList.toggle('d-none');
+        e.target.classList.toggle('open');
+    })
+  });
+}
+
+
+openSub();
 sendFormModal();
 sendFormBlock();
 showForm();
