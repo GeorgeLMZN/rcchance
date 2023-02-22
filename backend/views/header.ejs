@@ -25,25 +25,26 @@
                 <div class="header-nav_btn header-nav_btn__close">
                     <img src="/public/images/arrow_right.svg" alt="">
                 </div>
-                <% for(var i = 0; i < routes.routes.length; i++) {%>
-
-                    <li class="header-nav_item">
-                        <a href="<%- routes.routes[i].path %>" class="header-nav_link"><%= routes.routes[i].name %></a>
-                        <% if (routes.sub_routes[routes.routes[i].id]){ %>
-                            <div class="triangle">
-                                
+                <% for(var i = 0; i < routes.length; i++) {%>
+                    <div class="header-nav_block">
+                        <li class="header-nav_item">
+                            <a href="<%- routes[i].path %>" class="header-nav_link"><%= routes[i].name %></a>
+                            <% if (routes_sub[routes[i].id]){ %>
+                                <div class="triangle">
+                                    
+                                </div>
+                            <% } %>
+                        </li>
+                        <% if (routes_sub[routes[i].id]){ %>
+                            <div class="header-nav_item-sub d-none">
+                                <% routes_sub[routes[i].id].forEach(function(link) { %>
+                                    <li class="header-nav_item">
+                                        <a href="<%- routes[i].path + link.path %>" class="header-nav_link"><%= link.name %></a>
+                                    </li>
+                                 <% }); %> 
                             </div>
                         <% } %>
-                    </li>
-                    <% if (routes.sub_routes[routes.routes[i].id]){ %>
-                        <div class="header-nav_item-sub d-none">
-                            <% routes.sub_routes[routes.routes[i].id].forEach(function(link) { %>
-                                <li class="header-nav_item">
-                                    <a href="<%- '/' + link.parent_slug + link.path %>" class="header-nav_link"><%= link.name %></a>
-                                </li>
-                             <% }); %> 
-                        </div>
-                    <% } %>
+                    </div>
                 <% } %>
             </ul>
         </nav>

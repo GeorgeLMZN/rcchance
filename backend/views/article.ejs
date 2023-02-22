@@ -11,7 +11,7 @@
     <%- include(partials.header) %>
     <section class="section">
         <div class="container-fluid">
-            <div class="main" style="background-image: url('<%- cms_url + content.article_preview_image %>')";>
+            <div class="main" style="background-image: url('<%- cms_url + content.article_preview_image.data.attributes.url %>')";>
                 <div class="container">
                     <h1 class="main-heading">
                         <span class="main-heading_top">
@@ -28,13 +28,24 @@
             </div>
         </div>
     </section>
+    <section class="breadcrumbs">
+        <div class="container py-0">
+            <ul class="breadcrumbs-list">
+                <% for(var i=0; i < breadcrumbs.length; i++) {%>
+                    <li class="breadcrumb">
+                        <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        </section>
     <section class="section">
         <div class="container pb-50">
             <% for(var i=0; i < content.article_block.length; i++) {%>
                 <% if((i % 2) > 0){ %>
                     <div class="content mb-50 reverse">
                         <div class="content-image">
-                            <img src="<%- cms_url + content.article_block[0].main_image.data[0].attributes.url %>" alt="">
+                            <img src="<%- cms_url + content.article_block[i].main_image.data[0].attributes.url %>" alt="">
                         </div>
                         <div class="content-text">
                             <div class="content-info mt-0">
@@ -54,7 +65,7 @@
                             </div>
                         </div>
                         <div class="content-image">
-                            <img src="<%- cms_url + content.article_block[0].main_image.data[0].attributes.url %>" alt="">
+                            <img src="<%- cms_url + content.article_block[i].main_image.data[0].attributes.url %>" alt="">
                         </div>
                     </div>
                 <% } %>

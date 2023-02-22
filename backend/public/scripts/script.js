@@ -53,7 +53,8 @@ const openSub = () => {
 
   btnShow.forEach((e) => {
     e.addEventListener('click', (e) => {
-        const subList = e.target.parentNode.parentNode.querySelector('.header-nav_item-sub');
+        console.log(e.target.parentNode);
+        const subList = e.target.closest('.header-nav_block').querySelector('.header-nav_item-sub');
         subList.classList.toggle('d-none');
         e.target.classList.toggle('open');
     })

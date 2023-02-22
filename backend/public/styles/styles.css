@@ -125,7 +125,6 @@ button {
   min-height: 100%;
   padding: 32px 20px;
   background-color: #40AD74;
-  padding-top: 100px;
   transition: none;
 }
 
@@ -174,6 +173,7 @@ button {
   transition: transform 0.5s;
   width: 400px;
   max-width: 100%;
+  box-sizing: border-box;
 }
 .header-nav_item {
   margin-bottom: 25px;
@@ -213,7 +213,7 @@ button {
   max-width: 100%;
   background-image: url(../images/1.jpeg);
   background-position: bottom center;
-  background-size: 100% 100%;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -709,8 +709,11 @@ button {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  padding: 20px 0;
 }
-
+.header-nav_block {
+  width: 100%;
+}
 .breadcrumb {
   margin-right: 5px;
   display: flex;
@@ -783,6 +786,21 @@ button {
   max-height: 400px;
   overflow: hidden;
 }
+
+.container-404 {
+  height: 100%;
+}
+
+.back-link {
+  font-size: 20px;
+  padding: 20px;
+  border: 1px solid #40AD74;
+}
+
+.container-404  {
+  padding: 75px 15px;
+}
+
 @media screen and (max-width: 450px) {
   .container-fluid {
     padding: 0;

@@ -9,6 +9,28 @@
 </head>
 <body>
     <%- include(partials.header) %>
+    <section class="section">
+        <div class="container-fluid">
+            <div class="container">
+                <h1 class="main-heading">
+                    <span class="content-heading_bottom">
+                        Прайс
+                    </span>
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="breadcrumbs">
+        <div class="container py-0">
+            <ul class="breadcrumbs-list">
+                <% for(var i=0; i < breadcrumbs.length; i++) {%>
+                    <li class="breadcrumb">
+                        <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </section>
     <section class="section bg-gray">
         <div class="container">
             <div class="about">

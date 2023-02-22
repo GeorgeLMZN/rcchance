@@ -22,6 +22,17 @@
             </div>
         </div>
     </section>
+    <section class="breadcrumbs">
+        <div class="container py-0">
+            <ul class="breadcrumbs-list">
+                <% for(var i=0; i < breadcrumbs.length; i++) {%>
+                    <li class="breadcrumb">
+                        <a href="<%- breadcrumbs[i].url %>" class=""><%= breadcrumbs[i].name %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </section>
     <section class="section">
         <% for(var i=0; i < content.length; i++) {%>
             <div class="container-fluid mt-20">

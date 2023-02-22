@@ -2,9 +2,9 @@
     <div class="container">
         <nav class="footer-nav">
             <ul class="footer-nav_list">
-                <% for(var i=0; i < routes.routes.length; i++) {%>
+                <% for (var i=0; i < routes.length; i++) {%>
                     <li class="footer-nav_item">
-                        <a href="<%- routes.routes[i].path %>" class="footer-nav_link"><%= routes.routes[i].name %></a>
+                        <a href="<%- routes[i].path %>" class="footer-nav_link"><%= routes[i].name %></a>
                     </li>
                 <% } %>
             </ul>

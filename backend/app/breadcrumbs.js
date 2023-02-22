@@ -1,34 +1,30 @@
-import CyrillicToTranslit from 'cyrillic-to-translit-js';
-const cyrillicToTranslit = new CyrillicToTranslit();
 import lodash from 'lodash';
-import { createRoutes } from './routes.js';
+import { get_news_single_name } from './get_data.js';
 
-// const ixRoutes = lodash.keyBy(parsed_routes, 'path');
-const ixBreadcrumbs = {};
+const getBreadcrumbs = async (url, routes) => {
+    const ixRoutes = lodash.keyBy(routes.routes, 'slug'),
+        ixSubs = lodash.keyBy(routes.subs, 'slug');
 
-// for (let key in ixRoutes) {
-//     const newKey = key.replace('/', '')
-//     ixBreadcrumbs[newKey] = ixRoutes[key];
-// }
-
-const getBreadcrumbs = async (url) => {
-    const router = createRoutes();
-
-    var rtn = [{ name: "Главная", url: "/" }],
+    let rtn = [{ name: "Главная", url: "/" }],
         acc = "",
         arr = url.substring(1).split("/");
 
     for (let i = 0; i < arr.length; i++) {
+
         acc = i != arr.length - 1 ? acc+"/"+arr[i] : null;
-        const name = ixBreadcrumbs[arr[i]]?.name;
+
+        const name = ixRoutes[arr[i]]?.name || ixSubs[arr[i]]?.name;
+
         if (name) {
             rtn[i+1] = { name: name, url: acc };
         } else {
-            rtn[i+1] = { name: cyrillicToTranslit.reverse(arr[i]), url: acc };
+            const singleNews = await (await get_news_single_name(arr[i])).json();
+
+            singleNews.data ? rtn[i+1] = { name: singleNews.data.attributes.name, url: acc } : null;
         }
     }
-    
-    return rtn;
+
+    return lodash.compact(rtn);
 };
 
 export { getBreadcrumbs };
