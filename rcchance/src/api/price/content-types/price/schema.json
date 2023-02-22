@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "prices",
+  "info": {
+    "singularName": "price",
+    "pluralName": "prices",
+    "displayName": "Прайс",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_heading_h1": {
+      "type": "string"
+    },
+    "price_page_block": {
+      "displayName": "price_page_block",
+      "type": "component",
+      "repeatable": true,
+      "component": "price-page-block.price-page-block"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo-info.seo"
+    }
+  }
+}

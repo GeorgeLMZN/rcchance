@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_contact_pages_text_tekst_straniczy_kontaktov",
+  "info": {
+    "displayName": "Текст страницы контактов"
+  },
+  "options": {},
+  "attributes": {
+    "main_text": {
+      "type": "richtext"
+    }
+  }
+}

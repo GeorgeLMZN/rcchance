@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_contact_info_kontaktnaya_informacziya",
+  "info": {
+    "displayName": "Контактная информация",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    }
+  }
+}

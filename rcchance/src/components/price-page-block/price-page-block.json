@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_price_page_block_price_page_blocks",
+  "info": {
+    "displayName": "price_page_block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "price_page_block_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "text_block": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-block.text-block"
+    },
+    "download_link": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Контакты",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "main_heading": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact-info.kontaktnaya-informacziya"
+    },
+    "email": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact-info.kontaktnaya-informacziya"
+    },
+    "contact_text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "contact-pages-text.tekst-straniczy-kontaktov"
+    },
+    "block_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "page_preview_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo-info.seo"
+    }
+  }
+}
