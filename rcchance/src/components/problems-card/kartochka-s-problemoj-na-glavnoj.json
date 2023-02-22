@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_problems_card_kartochka_s_problemoj_na_glavnoj",
+  "info": {
+    "displayName": "карточка с проблемой на главной"
+  },
+  "options": {},
+  "attributes": {
+    "problem_photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "problem_title": {
+      "type": "string"
+    },
+    "problem_text": {
+      "type": "text"
+    }
+  }
+}

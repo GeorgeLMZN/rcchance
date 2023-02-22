@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statis",
+  "info": {
+    "singularName": "stati",
+    "pluralName": "statis",
+    "displayName": "Статьи",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "article_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "article_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-block.text-block"
+    },
+    "kategorii_statej": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::kategorii-statej.kategorii-statej"
+    }
+  }
+}

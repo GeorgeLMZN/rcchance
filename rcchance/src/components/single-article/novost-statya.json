@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_single_article_novost_statya_s",
+  "info": {
+    "displayName": "Новость(Статья)",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "article_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "article_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-block.text-block"
+    }
+  }
+}

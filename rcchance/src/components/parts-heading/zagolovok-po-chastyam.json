@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_parts_heading_zagolovok_po_chastyam_s",
+  "info": {
+    "displayName": "Заголовок ( по частям )"
+  },
+  "options": {},
+  "attributes": {
+    "part_black": {
+      "type": "string"
+    },
+    "part_green": {
+      "type": "string"
+    }
+  }
+}

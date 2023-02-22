@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_article_block_article_blocks",
+  "info": {
+    "displayName": "article_block"
+  },
+  "options": {},
+  "attributes": {
+    "article_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "article_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-block.text-block"
+    }
+  }
+}

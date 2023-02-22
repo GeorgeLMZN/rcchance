@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "novostis",
+  "info": {
+    "singularName": "novosti",
+    "pluralName": "novostis",
+    "displayName": "Новости",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "article_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "article_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-block.text-block"
+    },
+    "article_preview_text": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500,
+      "minLength": 250
+    },
+    "article_preview_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "kind": "singleType",
+  "collectionName": "mains",
+  "info": {
+    "singularName": "main",
+    "pluralName": "mains",
+    "displayName": "Главная страница",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "problems_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "problems-card.kartochka-s-problemoj-na-glavnoj"
+    },
+    "partial_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "advantage_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "advantage-card.kartochka-preimushhestva"
+    },
+    "advantage_textable": {
+      "type": "component",
+      "repeatable": true,
+      "component": "advantage-card.kartochka-preimushhestva"
+    },
+    "about_our_work": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "about_our_work_text": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-block.text-block"
+    },
+    "how_we_work_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "how_we_work_item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "advantage-card.kartochka-preimushhestva"
+    },
+    "clients_about_us_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "clients_about_us_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "problems-card.kartochka-s-problemoj-na-glavnoj"
+    },
+    "main_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "about_clinic_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "about_clinic_block": {
+      "type": "component",
+      "repeatable": false,
+      "component": "text-block.text-block"
+    },
+    "main_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "problems_we_solwed": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    }
+  }
+}

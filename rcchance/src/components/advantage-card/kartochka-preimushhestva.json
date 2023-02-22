@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_advantage_card_kartochka_preimushhestva",
+  "info": {
+    "displayName": "карточка преимущества",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "advantage_name": {
+      "type": "string"
+    },
+    "advantage_desc": {
+      "type": "string"
+    },
+    "advantage_icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

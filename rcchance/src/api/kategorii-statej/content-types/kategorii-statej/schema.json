@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kategorii_statejs",
+  "info": {
+    "singularName": "kategorii-statej",
+    "pluralName": "kategorii-statejs",
+    "displayName": "Категории статей",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "article_heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "parts-heading.zagolovok-po-chastyam"
+    },
+    "article_block": {
+      "type": "component",
+      "repeatable": true,
+      "component": "text-block.text-block"
+    },
+    "article_preview_image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
